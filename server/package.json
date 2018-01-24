@@ -1,6 +1,9 @@
 {
-    "name": "mso-client",
+    "name": "mso-server",
     "version": "0.1.0",
+    "scripts": {
+        "start": "node index"
+    },
     "devDependencies": {},
     "dependencies": {
         "express": "^4.16.2"
