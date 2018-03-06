@@ -10,7 +10,7 @@ import configureStore from './configureStore';
 
 import Routes from './routes';
 
-import Login from './modules/account/Login';
+import { app } from './modules';
 
 const history = createHistory();
 
@@ -20,7 +20,9 @@ const store = configureStore({
 
 const Index = () => (
   <Provider store={store}>
-    <Routes history={history} />
+    <app.App>
+      <Routes history={history} />
+    </app.App>
   </Provider>
 );
 
