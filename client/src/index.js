@@ -5,6 +5,8 @@ import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
 
 import './index.css';
+import baseStyles from './styles/base';
+
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './configureStore';
 
@@ -15,15 +17,18 @@ import { app } from './modules';
 const history = createHistory();
 
 const store = configureStore({
-  mware: routerMiddleware(history),
+  mware: routerMiddleware(history)
 });
 
 const Index = () => (
-  <Provider store={store}>
-    <app.App>
-      <Routes history={history} />
-    </app.App>
-  </Provider>
+  baseStyles(),
+  (
+    <Provider store={store}>
+      <app.App>
+        <Routes history={history} />
+      </app.App>
+    </Provider>
+  )
 );
 
 ReactDOM.render(<Index />, document.getElementById('root'));
