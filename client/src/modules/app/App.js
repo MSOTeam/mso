@@ -3,22 +3,25 @@ import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const App = ({ children }) => (
-  <Grid>
+  <Grid style={{ fontSize: 12 }}>
     <Row middle="xs" style={{ height: 100 }}>
       <Col xsOffset={2} xs={5}>
         <h3>MYSHOPOVER</h3>
       </Col>
-      <Col
-        xs={4}
-        style={{
-          display: 'flex',
-          fontSize: 12,
-          justifyContent: 'space-between'
-        }}
-      >
-        <div>Find a personal shopper</div>
-        <div>Become a personal shopper</div>
-        <div>Sign up</div>
+      <Col xs={2}>Find a personal shopper</Col>
+      <Col xs={2}>Become a personal shopper</Col>
+      <Col>
+        <button
+          style={{
+            background: '#08CCA6',
+            border: 0,
+            color: '#fff',
+            height: 40,
+            cursor: 'pointer'
+          }}
+        >
+          Sign up
+        </button>
       </Col>
     </Row>
     <Row>
@@ -27,9 +30,29 @@ const App = ({ children }) => (
     <Row
       middle="xs"
       center="xs"
-      style={{ height: 200, background: '#000', color: '#fff' }}
+      style={{
+        height: 200,
+        background: '#000',
+        color: '#fff',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        fontSize: 12
+      }}
     >
-      <Col>Footer</Col>
+      <Col
+        xs={2}
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between'
+        }}
+      >
+        <div>About</div>
+        <div>Help</div>
+        <div>Blog</div>
+        <div>FAQ</div>
+      </Col>
     </Row>
   </Grid>
 );
