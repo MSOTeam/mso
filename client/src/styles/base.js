@@ -4,7 +4,9 @@ import reset from 'styled-reset';
 
 const baseStyles = () => injectGlobal`
   ${reset}
-  /* other styles */
+  * {
+    font-family: 'Nunito Sans', sans-serif !important;
+  }
 `;
 
 export default baseStyles;
