@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Navigation from '../navigation/index';
 import Logo from '../../assets/img/logo.svg';
-
+import { color } from '../../styles/color';
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <Grid>
         <Navigation />
-        <div style={{ background: 'red' }} />
+        <div style={{ background: color.primary }} />
       </Grid>
     );
   }
