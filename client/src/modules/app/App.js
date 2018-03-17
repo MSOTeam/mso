@@ -33,10 +33,12 @@ class App extends Component {
           <Navigation />
         </NavWrapper>
         <Search />
-        <div style={{ background: color.primary }} />
-        <div style={{ background: color.secondary }} />
-        <div style={{ background: color.lightgrey }} />
-        <div style={{ background: color.dark }} />
+        <div style={{ background: color.primary }}>HOW IT WORKS</div>
+        <div style={{ background: color.secondary }}>EXPLORE OUR SHOPPERS</div>
+        <div style={{ background: color.lightgrey }}>
+          what do our customers say
+        </div>
+        <div style={{ background: color.dark, color: color.light }}>Footer</div>
       </Grid>
     );
   }
