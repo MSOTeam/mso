@@ -2,15 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Navigation from '../navigation/index';
-import Logo from '../../assets/img/logo.svg';
 import SearchImg from '../../assets/img/search_img.jpg';
 import { color } from '../../styles/color';
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 25% 70vh 100px 100px 100px 100px 100px;
+  grid-template-rows: 25% 60vh 100px 100px 100px 100px 100px;
   margin: auto;
+`;
+
+const NavWrapper = styled.div`
+  background: ${color.light};
+  position: sticky;
+  top: 0px;
 `;
 
 const Search = styled.div`
@@ -24,12 +29,13 @@ class App extends Component {
     const { children } = this.props;
     return (
       <Grid>
-        <Navigation />
+        <NavWrapper>
+          <Navigation />
+        </NavWrapper>
         <Search />
-        <div>{children}</div>
         <div style={{ background: color.primary }} />
         <div style={{ background: color.secondary }} />
-        <div style={{ background: color.light }} />
+        <div style={{ background: color.lightgrey }} />
         <div style={{ background: color.dark }} />
       </Grid>
     );
