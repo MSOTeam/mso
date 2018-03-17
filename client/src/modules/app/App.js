@@ -1,59 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import styled from 'styled-components';
+import { Grid, Cell } from 'styled-css-grid';
 import Logo from '../../assets/img/logo.svg';
+
+const GridCell = styled(Cell)`
+  text-align: right;
+  font-size: 14px;
+`;
+
 const App = ({ children }) => (
-  <Grid style={{ fontSize: 12 }}>
-    <Row middle="xs" style={{ height: 100 }}>
-      <Col xsOffset={2} xs={5}>
-        <img src={Logo} />
-      </Col>
-      <Col xs={2}>Find a personal shopper</Col>
-      <Col xs={2}>Become a personal shopper</Col>
-      <Col>
-        <button
-          style={{
-            background: '#08CCA6',
-            border: 0,
-            color: '#fff',
-            height: 40,
-            cursor: 'pointer'
-          }}
-        >
-          Sign up
-        </button>
-      </Col>
-    </Row>
-    <Row>
-      <Col>{children}</Col>
-    </Row>
-    <Row
-      middle="xs"
-      center="xs"
-      style={{
-        height: 200,
-        background: '#000',
-        color: '#fff',
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        fontSize: 12
-      }}
-    >
-      <Col
-        xs={2}
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between'
-        }}
-      >
-        <div>About</div>
-        <div>Help</div>
-        <div>Blog</div>
-        <div>FAQ</div>
-      </Col>
-    </Row>
+  <Grid columns={9} gap="2px" style={{ width: '80vw', margin: '50px auto' }}>
+    <Cell width={5}>
+      {' '}
+      <img src={Logo} />
+    </Cell>
+    <GridCell height={2} gap="20px">
+      Find a Personal shopper
+    </GridCell>
+    <GridCell height={2}>Become a Personal Shopper</GridCell>
+    <GridCell height={2}>Sign up</GridCell>
+    <GridCell height={2}>Login</GridCell>
   </Grid>
 );
 
