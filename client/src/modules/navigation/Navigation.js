@@ -35,7 +35,7 @@ const Item = styled.span`
 
 const Navigation = ({ children, dispatch }) => (
   <Subgrid>
-    <img src={Logo} />
+    <img style={{ height: '25px' }} src={Logo} />
     <Box>Find a Personal Shopper</Box>
     <Box>Become a Personal Shopper</Box>
     <Box>Login</Box>
