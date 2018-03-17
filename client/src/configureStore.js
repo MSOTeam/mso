@@ -1,13 +1,11 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { routerReducer, push } from 'react-router-redux';
+import { routerReducer } from 'react-router-redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
-
 export default ({ initialState = {}, mware }) => {
-
   const appReducer = combineReducers({
-    routing: routerReducer,
+    router: routerReducer
   });
 
   const rootReducer = (state, action) => appReducer(state, action);
@@ -15,7 +13,7 @@ export default ({ initialState = {}, mware }) => {
   const store = createStore(
     rootReducer,
     initialState,
-    applyMiddleware(thunk, createLogger({ collapsed: true }), mware),
+    applyMiddleware(thunk, createLogger({ collapsed: true }), mware)
   );
   return store;
 };

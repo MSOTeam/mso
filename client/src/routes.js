@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Router, Route, Switch } from 'react-router';
-
-// import { ConnectedRouter } from 'react-router-redux';
-// import Login from './modules/account/Login';
+import { Route } from 'react-router';
+import { ConnectedRouter } from 'react-router-redux';
 
 import { account, main } from './modules';
 
 const Routes = props => (
-  <Router history={props.history}>
-    <Switch>
+  <ConnectedRouter history={props.history}>
+    <div>
       <Route exact path="/" component={main.Main} />
       <Route path="/login" component={account.Login} />
       <Route path="/register" component={account.Register} />
-    </Switch>
-  </Router>
+    </div>
+  </ConnectedRouter>
 );
 
 Routes.propTypes = {
