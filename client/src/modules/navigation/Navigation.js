@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { push } from 'react-router-redux';
+import { connect } from 'react-redux';
 import { Grid, Cell } from 'styled-css-grid';
 import Logo from '../../assets/img/logo.svg';
 
@@ -19,14 +21,18 @@ const Item = styled.a`
   cursor: pointer;
 `;
 
-const Navigation = ({ children }) => (
+const Navigation = ({ children, dispatch }) => (
   <Subgrid>
     <img src={Logo} />
     <Item>Find a Personal Shopper</Item>
     <Item>Become a Personal Shopper</Item>
-    <Item>Sign up!</Item>
+    <Item onClick={() => dispatch(push('/register'))}>Sign up!</Item>
     <Item>Login</Item>
   </Subgrid>
 );
 
-export default Navigation;
+Navigation.propTypes = {
+  dispatch: PropTypes.func.isRequired
+};
+
+export default connect()(Navigation);

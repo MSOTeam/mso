@@ -13,10 +13,11 @@ const Grid = styled.div`
 
 class App extends Component {
   render() {
+    const { children } = this.props;
     return (
       <Grid>
         <Navigation />
-        <div style={{ background: 'red' }} />
+        <div style={{ background: 'red' }}>{children}</div>
       </Grid>
     );
   }
