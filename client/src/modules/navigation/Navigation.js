@@ -1,19 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import { color } from '../../styles/color';
+import styled, { css, keyframes } from 'styled-components';
 import { push } from 'react-router-redux';
 import { connect } from 'react-redux';
+import { color } from '../../styles/color';
 import Logo from '../../assets/img/logo.svg';
+import IconSVG from '../../assets/img/icon.svg';
 
-const Subgrid = styled.div`
+const twist = keyframes`
+  0% {
+    transform: rotate(30deg);
+  }
+  40% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+`;
+
+const Icon = styled.img`
+  animation: 0.5s ${twist} ease;
+`;
+
+const Navgrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 15% 15% 5% 8%;
+  grid-template-columns: 25px 1fr 240px 240px 100px 150px;
   grid-template-rows: 1fr;
-  grid-column-gap: 40px;
+  grid-column-gap: 10px;
   align-items: center;
   width: 95vw;
-  margin: 2.2% auto;
+  margin: 30px auto;
 `;
 
 const Box = styled.p`
@@ -34,15 +51,16 @@ const Item = styled.span`
 `;
 
 const Navigation = ({ children, dispatch }) => (
-  <Subgrid>
-    <img style={{ height: '25px' }} src={Logo} />
+  <Navgrid>
+    <Icon src={IconSVG} />
+    <img src={Logo} />
     <Box>Find a Personal Shopper</Box>
     <Box>Become a Personal Shopper</Box>
-    <Box>Login</Box>
+    <Box>Log in</Box>
     <Box onClick={() => dispatch(push('/register'))}>
       <Item signup>Sign up!</Item>
     </Box>
-  </Subgrid>
+  </Navgrid>
 );
 
 Navigation.propTypes = {
