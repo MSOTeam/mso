@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-
+import Logo from '../../assets/img/logo.svg';
 const App = ({ children }) => (
   <Grid style={{ fontSize: 12 }}>
     <Row middle="xs" style={{ height: 100 }}>
       <Col xsOffset={2} xs={5}>
-        <h3>MYSHOPOVER</h3>
+        <img src={Logo} />
       </Col>
       <Col xs={2}>Find a personal shopper</Col>
       <Col xs={2}>Become a personal shopper</Col>
