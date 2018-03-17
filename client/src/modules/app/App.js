@@ -1,31 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Grid, Cell } from 'styled-css-grid';
+import Navigation from '../navigation/index';
 import Logo from '../../assets/img/logo.svg';
 
-const GridCell = styled(Cell)`
-  text-align: right;
-  font-size: 14px;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 70vh 100px 100px 100px 100px 100px;
+  margin: auto;
 `;
 
-const App = ({ children }) => (
-  <Grid columns={9} gap="2px" style={{ width: '80vw', margin: '50px auto' }}>
-    <Cell width={5}>
-      {' '}
-      <img src={Logo} />
-    </Cell>
-    <GridCell height={2} gap="20px">
-      Find a Personal shopper
-    </GridCell>
-    <GridCell height={2}>Become a Personal Shopper</GridCell>
-    <GridCell height={2}>Sign up</GridCell>
-    <GridCell height={2}>Login</GridCell>
-  </Grid>
-);
+class App extends Component {
+  render() {
+    return (
+      <Grid>
+        <Navigation />
+        <div style={{ background: 'red' }} />
+      </Grid>
+    );
+  }
+}
 
 App.propTypes = {
-  children: PropTypes.object.isRequired
+  children: PropTypes.object
 };
 
 export default App;

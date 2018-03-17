@@ -6,6 +6,7 @@ const baseStyles = () => injectGlobal`
   ${reset}
   * {
     font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 15px !important;
   }
 `;
 
