@@ -13,7 +13,7 @@ const Subgrid = styled.div`
   grid-column-gap: 40px;
   align-items: center;
   width: 95vw;
-  margin: 3.2% auto;
+  margin: 2.2% auto;
 `;
 
 const Box = styled.p`
