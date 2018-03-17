@@ -25,6 +25,10 @@ class App extends Component {
       <Grid>
         <Navigation />
         <Search />
+        <div style={{ background: color.primary }} />
+        <div style={{ background: color.secondary }} />
+        <div style={{ background: color.light }} />
+        <div style={{ background: color.dark }} />
       </Grid>
     );
   }
