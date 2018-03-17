@@ -34,7 +34,7 @@ const Signupfixed = styled.div`
   width: 100vw;
   height: 70px;
   position: fixed;
-   : 0;
+  bottom: 0;
   text-align: center;
   font-weight: 900;
   font-size: 20px !important;
