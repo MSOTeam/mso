@@ -13,7 +13,7 @@ const Subgrid = styled.div`
   grid-column-gap: 40px;
   align-items: center;
   width: 80vw;
-  margin: 50px auto;
+  margin: 4% auto;
 `;
 
 const Item = styled.a`
