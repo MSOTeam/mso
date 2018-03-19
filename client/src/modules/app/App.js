@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Navigation from '../navigation/index';
-import SearchImg from '../../assets/img/search_img.jpg';
 import Clock from '../../assets/img/clock.svg';
 import SearchSVG from '../../assets/img/search.svg';
 import Go from '../../assets/img/go.svg';
@@ -20,12 +19,6 @@ const NavWrapper = styled.div`
   background: ${color.light};
   position: sticky;
   top: 0px;
-`;
-
-const Search = styled.div`
-  background: url(${SearchImg});
-  background-size: cover;
-  background-position: center;
 `;
 
 const Signupfixed = styled.div`
@@ -53,8 +46,7 @@ class App extends Component {
         <NavWrapper>
           <Navigation />
         </NavWrapper>
-        <Search />
-        {/* {children} */}
+        {children}
         <div style={{ background: color.light }}>
           HOW IT WORKS
           <img src={Clock} />

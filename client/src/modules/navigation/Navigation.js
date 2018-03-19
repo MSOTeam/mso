@@ -54,9 +54,9 @@ const Navigation = ({ children, dispatch }) => (
   <Navgrid>
     <Icon src={IconSVG} />
     <img src={Logo} />
-    <Box>Find a Personal Shopper</Box>
+    <Box onClick={() => dispatch(push('/search'))}>Find a Personal Shopper</Box>
     <Box>Become a Personal Shopper</Box>
-    <Box>Log in</Box>
+    <Box onClick={() => dispatch(push('/login'))}>Log in</Box>
     <Box onClick={() => dispatch(push('/register'))}>
       <Item signup>Sign up!</Item>
     </Box>
