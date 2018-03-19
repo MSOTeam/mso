@@ -19,13 +19,20 @@ const twist = keyframes`
   }
 `;
 
+const Logowrapper = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+
 const Icon = styled.img`
+  margin-right: 10px;
   animation: 0.5s ${twist} ease;
 `;
 
 const Navgrid = styled.div`
   display: grid;
-  grid-template-columns: 25px 1fr 240px 240px 100px 150px;
+  grid-template-columns: 1fr 240px 240px 100px 150px;
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   align-items: center;
@@ -52,8 +59,10 @@ const Item = styled.span`
 
 const Navigation = ({ children, dispatch }) => (
   <Navgrid>
-    <Icon src={IconSVG} />
-    <img src={Logo} />
+    <Logowrapper onClick={() => dispatch(push('/'))}>
+      <Icon src={IconSVG} />
+      <img src={Logo} />
+    </Logowrapper>
     <Box onClick={() => dispatch(push('/search'))}>Find a Personal Shopper</Box>
     <Box>Become a Personal Shopper</Box>
     <Box onClick={() => dispatch(push('/login'))}>Log in</Box>
