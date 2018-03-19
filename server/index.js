@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet')
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -12,14 +13,8 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(helmet());
 
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello World' });
-});
-
-app.post('/api/registerShopper', (req, res) => {  
-  console.log(req.body);
-  res.send({ express: req.body });
-});
+require('./api/shopper.js')(app);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));

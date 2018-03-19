@@ -21,7 +21,7 @@ export const registerShopperFailure = error => ({
 
 export const registerShopper = shopper => dispatch => {
   axios
-    .post('/registerShopper', { shopper })
+    .post('/shopper', { shopper })
     .then(response => {
       dispatch(registerShopperSuccess(response));
     })
