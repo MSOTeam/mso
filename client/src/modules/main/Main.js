@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Search from '../search/Search';
-import Clock from '../../assets/img/clock.svg';
-import SearchSVG from '../../assets/img/search.svg';
-import Go from '../../assets/img/go.svg';
+import How from '../how/How';
 import { color } from '../../styles/color';
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 25% 60vh 800px 100px 100px 100px 100px;
+  grid-template-rows: 25% 30vh 200px 100px 100px 100px 100px;
   margin: auto;
 `;
 
@@ -19,12 +17,7 @@ class Main extends Component {
     return (
       <Grid>
         <Search />
-        <div style={{ background: color.light }}>
-          HOW IT WORKS
-          <img src={Clock} />
-          <img src={SearchSVG} />
-          <img src={Go} />
-        </div>
+        <How />
         <div style={{ background: color.secondary }}>EXPLORE OUR SHOPPERS</div>
         <div style={{ background: color.lightgrey }}>
           what do our customers say

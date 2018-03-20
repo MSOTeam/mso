@@ -37,7 +37,8 @@ const Navgrid = styled.div`
   grid-column-gap: 10px;
   align-items: center;
   width: 95vw;
-  margin: 30px auto;
+  margin: auto;
+  height: 100px;
 `;
 
 const Box = styled.p`
@@ -67,7 +68,7 @@ const Navigation = ({ children, dispatch }) => (
     <Box>Become a Personal Shopper</Box>
     <Box onClick={() => dispatch(push('/login'))}>Log in</Box>
     <Box onClick={() => dispatch(push('/register'))}>
-      <Item signup>Sign up!</Item>
+      <Item signup>SIGN UP</Item>
     </Box>
   </Navgrid>
 );
