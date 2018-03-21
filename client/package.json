@@ -1,8 +1,7 @@
 {
   "name": "mso-client",
   "version": "0.1.0",
-  "private": true,
-  "proxy": "http://localhost:5000/",
+  "private": true,  
   "dependencies": {
     "axios": "^0.18.0",
     "history": "^4.7.2",
