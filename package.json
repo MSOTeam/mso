@@ -5,7 +5,7 @@
     "postinstall": "npm-recursive-install --skip-root",
     "client": "cd client && npm start",
     "server": "cd server && nodemon index.js",
-    "start": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\""
+    "start": "npm run client"
   },
   "devDependencies": {},
   "dependencies": {
