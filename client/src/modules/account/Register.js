@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import * as actions from './actions';
 
 class Register extends Component {
-  onRegister = event => {
+  onRegister = (event) => {
     const { dispatch } = this.props;
     event.preventDefault();
     dispatch(actions.registerShopper(this.state));
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event) => {
     const target = event.target;
     this.setState({
-      [target.name]: target.value
+      [target.name]: target.value,
     });
   };
 
@@ -45,7 +45,7 @@ class Register extends Component {
 }
 
 Register.propTypes = {
-  dispatch: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect()(Register);

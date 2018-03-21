@@ -17,7 +17,7 @@ const Routes = props => (
 );
 
 Routes.propTypes = {
-  history: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired,
 };
 
 export default Routes;

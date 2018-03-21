@@ -2,30 +2,30 @@ import axios from 'axios';
 import {
   REGISTER_SHOPPER_REQUEST,
   REGISTER_SHOPPER_SUCCESS,
-  REGISTER_SHOPPER_FAILURE
+  REGISTER_SHOPPER_FAILURE,
 } from './constants';
 
 export const registerShopperRequest = () => ({
-  type: REGISTER_SHOPPER_REQUEST
+  type: REGISTER_SHOPPER_REQUEST,
 });
 
 export const registerShopperSuccess = shopper => ({
   type: REGISTER_SHOPPER_SUCCESS,
-  shopper
+  shopper,
 });
 
 export const registerShopperFailure = error => ({
   type: REGISTER_SHOPPER_FAILURE,
-  error
+  error,
 });
 
-export const registerShopper = shopper => dispatch => {
+export const registerShopper = shopper => (dispatch) => {
   axios
     .post('/shopper', { shopper })
-    .then(response => {
+    .then((response) => {
       dispatch(registerShopperSuccess(response));
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(registerShopperFailure(error));
     });
 };

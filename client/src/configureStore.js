@@ -5,7 +5,7 @@ import { createLogger } from 'redux-logger';
 
 export default ({ initialState = {}, mware }) => {
   const appReducer = combineReducers({
-    router: routerReducer
+    router: routerReducer,
   });
 
   const rootReducer = (state, action) => appReducer(state, action);
