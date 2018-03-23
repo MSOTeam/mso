@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import Navigation from '../navigation/index';
 import { go } from 'react-router-redux/actions';
 import { color } from '../../styles/color';
+import { push } from 'react-router-redux';
+import { connect } from 'react-redux';
 
 const NavWrapper = styled.div`
   background: ${color.light};
@@ -26,6 +28,7 @@ const Signupfixed = styled.div`
   justify-content: center;
   letter-spacing: 4px;
   cursor: pointer;
+  box-shadow: #00000085 -28px 50px 33px 43px;
 `;
 
 class App extends Component {
