@@ -20,7 +20,7 @@ class Main extends Component {
         <How />
         <div style={{ background: color.secondary }}>EXPLORE OUR SHOPPERS</div>
         <div style={{ background: color.lightgrey }}>
-          what do our customers say
+          what do our customers say!
         </div>
         <div style={{ background: color.dark, color: color.light }}>Footer</div>
       </Grid>
