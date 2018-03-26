@@ -16,7 +16,6 @@ const Headline = styled.h1`
 `;
 
 const Actions = styled.div`
-  font-size: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -33,7 +32,7 @@ const How = () => {
             <div style={{display: 'flex', height: '200px', margin: 'auto'}}>
               <img style={{ margin: 'auto' }} src={SearchSVG} />
             </div>
-            <h2 style={{ textAlign: 'center', fontSize: '16px !important', fontWeight: '700', marginBottom:'15px'}}>FIND A PERSONAL SHOPPER</h2>
+            <p style={{ textAlign: 'center', fontSize: '18px !important', fontWeight: '700', marginBottom:'15px'}}>FIND A PERSONAL SHOPPER</p>
             <p style={{ textAlign: 'center', lineHeight:'25px', width: '296px', margin: 'auto'}}>Personal Shoppers list their services and all you need to do is search for the right person to assist you on following dates.</p>        
         </div>
         <div style={{ display: 'grid' }}>

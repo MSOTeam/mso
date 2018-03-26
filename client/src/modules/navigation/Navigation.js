@@ -24,6 +24,7 @@ const Logowrapper = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-left: 2.5vw;
 `;
 
 const Icon = styled.img`
@@ -33,17 +34,22 @@ const Icon = styled.img`
 
 const Navgrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 240px 240px 100px 90px;
+  grid-template-columns: 1fr 240px 240px 100px 120px;
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   align-items: center;
-  margin: 0 2.5vw;
   height: 100px;
+  border-bottom: 1px solid ${color.lightgrey}
 `;
 
 const Box = styled.p`
   text-align: right;
   cursor: pointer;
+  ${props =>
+    props.last &&
+    css`
+      margin-right: 2.5vw;
+  `};
   ${props => props.value == 'become' && css`
   position: relative;
   &:after {
@@ -81,7 +87,7 @@ const Navigation = ({ children, dispatch }) => (
     <Box onClick={() => dispatch(push('/search'))}>Find a Personal Shopper</Box>
     <Box>Become a Personal Shopper</Box>
     <Box onClick={() => dispatch(push('/register'))}>Sign up</Box>
-    <Box onClick={() => dispatch(push('/login'))}>Log in</Box>
+    <Box last onClick={() => dispatch(push('/login'))}>Log in</Box>
   </Navgrid>
 );
 
