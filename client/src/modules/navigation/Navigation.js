@@ -33,12 +33,11 @@ const Icon = styled.img`
 
 const Navgrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 240px 240px 100px 150px;
+  grid-template-columns: 1fr 240px 240px 100px 90px;
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   align-items: center;
-  width: 95vw;
-  margin: auto;
+  margin: 0 2.5vw;
   height: 100px;
 `;
 
@@ -80,11 +79,9 @@ const Navigation = ({ children, dispatch }) => (
       <img src={Logo} />
     </Logowrapper>
     <Box onClick={() => dispatch(push('/search'))}>Find a Personal Shopper</Box>
-    <Box value='become'>Become a Personal Shopper</Box>
+    <Box>Become a Personal Shopper</Box>
+    <Box onClick={() => dispatch(push('/register'))}>Sign up</Box>
     <Box onClick={() => dispatch(push('/login'))}>Log in</Box>
-    <Box onClick={() => dispatch(push('/register'))}>
-      <Item signup>SIGN UP</Item>
-    </Box>
   </Navgrid>
 );
 
